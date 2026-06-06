@@ -40,7 +40,7 @@
       </a>
     </nav>
     <div class="sidebar-footer">
-      <div class="user-card">
+      <div class="user-card" style="cursor: pointer;">
         <div class="user-avatar" id="sb-initials">--</div>
         <div class="user-info">
           <div class="user-name" id="sb-nome">Carregando…</div>
@@ -57,7 +57,9 @@
         <div class="topbar-sub">Visão geral da sua saúde e agendamentos</div>
       </div>
       <div class="topbar-right">
-        <div class="user-avatar" id="top-initials" style="width:36px;height:36px;font-size:14px">--</div>
+        <a href="{{ url_for('pagina_perfil') }}" style="text-decoration: none;">
+          <div class="user-avatar" id="top-initials" style="width:36px;height:36px;font-size:14px">--</div>
+        </a>
       </div>
     </header>
     <div class="page-content">

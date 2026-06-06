@@ -40,7 +40,7 @@
       </a>
     </nav>
     <div class="sidebar-footer">
-      <div class="user-card">
+      <div class="user-card" style="cursor: pointer;">
         <div class="user-avatar" id="sb-initials">--</div>
         <div class="user-info">
           <div class="user-name" id="sb-nome">Carregando…</div>
@@ -57,7 +57,9 @@
         <div class="topbar-sub">Defesas cibernéticas ativas e trilha de auditoria</div>
       </div>
       <div class="topbar-right">
-        <div class="user-avatar" id="top-initials" style="width:36px;height:36px;font-size:14px">--</div>
+        <a href="{{ url_for('pagina_perfil') }}" style="text-decoration: none;">
+          <div class="user-avatar" id="top-initials" style="width:36px;height:36px;font-size:14px">--</div>
+        </a>
       </div>
     </header>
     <div class="page-content">
@@ -114,76 +116,7 @@
         </div>
       </div>
 
-      <!-- Demonstrador Didático de Criptografia (Suporte para Apresentação em Slides) -->
-      <div class="panel" style="margin-bottom:1.5rem">
-        <div class="panel-header">
-          <span class="panel-title">📚 Demonstrador de Criptografia (Didático para a Aula)</span>
-          <span class="panel-action">Teste de Cifras Históricas vs. Hashing Moderno</span>
-        </div>
-        <div class="panel-body crypto-demo-container">
-          <p style="font-size:13px; color:var(--muted); margin-bottom:0.5rem">
-            Use este painel para demonstrar na apresentação o funcionamento de cifras de substituição (César), cifras polialfabéticas (Vigenère) e o algoritmo moderno de hashing unidirecional com salt (Bcrypt) utilizado para proteger as senhas no sistema.
-          </p>
-          
-          <div class="crypto-grid-3">
-            <!-- Coluna 1: Cifra de César -->
-            <div class="crypto-control-card">
-              <div style="font-weight:700; font-size:14px; margin-bottom:8px">Cifra de César <span class="badge-crypto weak">Fraca</span></div>
-              <div class="field" style="margin-bottom:8px">
-                <label>Texto Plano / Cifrado</label>
-                <input type="text" id="cesar-texto" placeholder="Digite uma palavra para cifrar...">
-              </div>
-              <div class="field" style="margin-bottom:12px">
-                <label>Deslocamento (Chave numérica)</label>
-                <input type="number" id="cesar-chave" value="3" min="1" max="25" style="padding:7px 10px">
-              </div>
-              <div style="display:flex; gap:8px; margin-bottom:12px">
-                <button class="btn" style="padding:6px; font-size:12px; margin:0; flex:1" id="btn-cesar-cifrar">Cifrar</button>
-                <button class="btn btn-ghost" style="padding:6px; font-size:12px; margin:0; flex:1" id="btn-cesar-decifrar">Decifrar</button>
-              </div>
-              <label>Resultado:</label>
-              <div class="crypto-result-box" id="cesar-resultado">---</div>
-            </div>
 
-            <!-- Coluna 2: Cifra de Vigenère -->
-            <div class="crypto-control-card">
-              <div style="font-weight:700; font-size:14px; margin-bottom:8px">Cifra de Vigenère <span class="badge-crypto weak">Fraca</span></div>
-              <div class="field" style="margin-bottom:8px">
-                <label>Texto Plano / Cifrado</label>
-                <input type="text" id="vigenere-texto" placeholder="Digite para cifrar...">
-              </div>
-              <div class="field" style="margin-bottom:12px">
-                <label>Palavra-Chave (Texto)</label>
-                <input type="text" id="vigenere-chave" value="chave" placeholder="Chave textual" style="padding:7px 10px">
-              </div>
-              <div style="display:flex; gap:8px; margin-bottom:12px">
-                <button class="btn" style="padding:6px; font-size:12px; margin:0; flex:1" id="btn-vigenere-cifrar">Cifrar</button>
-                <button class="btn btn-ghost" style="padding:6px; font-size:12px; margin:0; flex:1" id="btn-vigenere-decifrar">Decifrar</button>
-              </div>
-              <label>Resultado:</label>
-              <div class="crypto-result-box" id="vigenere-resultado">---</div>
-            </div>
-
-            <!-- Coluna 3: Bcrypt (Hash com Salto) -->
-            <div class="crypto-control-card">
-              <div style="font-weight:700; font-size:14px; margin-bottom:8px">Bcrypt (Hash + Salto) <span class="badge-crypto strong">Segura</span></div>
-              <div class="field" style="margin-bottom:8px">
-                <label>Texto / Senha</label>
-                <input type="text" id="bcrypt-texto" placeholder="Digite uma senha...">
-              </div>
-              <div class="field" style="margin-bottom:12px">
-                <label>Salto (Automático por Hashing)</label>
-                <input type="text" disabled value="Salt Criptográfico Aleatório" style="padding:7px 10px; background:var(--surface3); opacity:0.8">
-              </div>
-              <div style="display:flex; gap:8px; margin-bottom:12px">
-                <button class="btn" style="padding:6px; font-size:12px; margin:0; flex:1" id="btn-bcrypt-hash">Gerar Hash (Via Única)</button>
-              </div>
-              <label>Hash Produzido (60 caracteres):</label>
-              <div class="crypto-result-box hash" id="bcrypt-resultado" style="font-size:11px; padding:8px">---</div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <!-- Trilha de Auditoria -->
       <div class="panel">

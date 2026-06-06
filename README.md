@@ -1,8 +1,8 @@
-Este repositório contém a aplicação **PayFlow**, um portal bancário simulado para realização de transferências financeiras.
+Este repositório contém a aplicação **ConectaSaúde**, um portal simulado de agendamento de consultas médicas e gestão de saúde digital (SUS e rede conveniada).
 
 > [!NOTE]
 > **Quer entender mais sobre o projeto e a sua arquitetura de segurança?**
-> Todo o detalhamento técnico das defesas implementadas, a análise de riscos e o roteiro para a apresentação acadêmica estão consolidados no arquivo:
+> Todo o detalhamento técnico das defesas implementadas, a análise de conformidade e o roteiro para a apresentação acadêmica estão consolidados no arquivo:
 > 👉 **[Documentação de Segurança (Projeto.md)](Projeto.md)**
 
 ---
@@ -18,16 +18,16 @@ Certifique-se de ter o Python 3 instalado em seu computador.
 
    ```bash
    # Criar ambiente virtual
-   python -m venv venv
+   python -m venv .venv
 
    # Ativar ambiente virtual (Windows PowerShell)
-   .\venv\Scripts\Activate.ps1
+   .\.venv\Scripts\Activate.ps1
 
    # Ativar ambiente virtual (Windows CMD)
-   .\venv\Scripts\activate.bat
+   .\.venv\Scripts\activate.bat
 
    # Ativar ambiente virtual (Linux/macOS)
-   source venv/bin/activate
+   source .venv/bin/activate
 
    # Instalar dependências
    pip install -r requirements.txt

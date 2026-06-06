@@ -1283,3 +1283,74 @@
      color: var(--green);
      border: 1px solid rgba(16, 185, 129, 0.3);
    }
+
+    /* ── Contraste e Acessibilidade para a Sidebar Azul ── */
+    .sidebar {
+      background: var(--sun) !important;
+      color: #ffffff !important;
+      border-right: 1px solid var(--gold-dark) !important;
+    }
+    .sidebar-logo {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+    }
+    .sidebar-logo .logo-text {
+      color: #ffffff !important;
+    }
+    .sidebar-logo .logo-text span {
+      color: var(--green-light) !important;
+    }
+    .sidebar-logo .logo-icon {
+      background: var(--gold-dark) !important;
+      border-color: var(--green-light) !important;
+      color: #ffffff !important;
+    }
+    .nav-section-label {
+      color: rgba(255, 255, 255, 0.6) !important;
+    }
+    .nav-item {
+      color: rgba(255, 255, 255, 0.85) !important;
+    }
+    .nav-item:hover {
+      background: rgba(255, 255, 255, 0.15) !important;
+      color: #ffffff !important;
+    }
+    .nav-item.active {
+      background: var(--surface) !important;
+      color: var(--sun) !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    }
+    .user-card {
+      background: rgba(255, 255, 255, 0.1) !important;
+      border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    }
+    .user-card:hover {
+      background: rgba(255, 255, 255, 0.18) !important;
+    }
+    .user-card .user-name {
+      color: #ffffff !important;
+    }
+    .user-card .user-email {
+      color: rgba(255, 255, 255, 0.7) !important;
+    }
+    .user-card .user-logout {
+      color: rgba(255, 255, 255, 0.7) !important;
+    }
+    .user-card .user-logout:hover {
+      color: var(--error) !important;
+    }
+
+    /* ── Contraste e Acessibilidade para o Perfil Azul ── */
+    .profile-header {
+      background: var(--sun) !important;
+      border-color: var(--gold-dark) !important;
+      color: #ffffff !important;
+    }
+    .profile-header .profile-name {
+      color: #ffffff !important;
+    }
+    .profile-header .profile-email {
+      color: rgba(255, 255, 255, 0.9) !important;
+    }
+    .profile-header .profile-since {
+      color: rgba(255, 255, 255, 0.75) !important;
+    }

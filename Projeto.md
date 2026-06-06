@@ -48,7 +48,8 @@ As escolhas abaixo foram feitas **intencionalmente** com base no escopo acadêmi
 
 ### 3. Biometria Facial — Webcam (O que o usuário **é**)
 * Após a validação do OTP, a sessão é mantida em estado de pré-autenticação limitada (`pre_auth_email`).
-* O acesso ao dashboard e dados só é liberado mediante o reconhecimento biométrico facial via webcam do paciente, capturando e validando a imagem do rosto em tempo real antes de promover a sessão para o estado totalmente logado.
+* O acesso ao dashboard e dados só é liberado mediante a verificação biométrica facial via webcam do paciente.
+* **Nota Acadêmica de Portabilidade (Importante):** A validação biométrica é *simulada* no cliente (com acesso à webcam em tempo real via HTML5) e validada logicamente no backend. Esta escolha foi feita de forma intencional para garantir a portabilidade total do projeto (permitindo que ele rode instantaneamente na máquina de avaliação do professor sem exigir dependências complexas de IA como OpenCV ou compiladores C++ locais, que causam erros frequentes no Windows).
 
 ### 4. Proteção contra Rate Limiting & Força Bruta
 * Rate limit por IP em memória: se um IP falhar o login, cadastro ou validação de OTP mais de 5 vezes consecutivas, ele é bloqueado temporariamente por 5 minutos.
@@ -87,5 +88,4 @@ A aplicação injeta em todas as respostas HTTP os seguintes cabeçalhos de defe
 ### 12. Auditoria e Logs Automatizados (Audit Log)
 * Grava logs estruturados de auditoria (`audit.log`) em formato JSON para registrar ações sensíveis (login, falhas, bloqueios, biometria, etc.) contendo Timestamp UTC, IP e E-mail.
 
-### 13. Demonstrador Interativo de Criptografias (Didático)
-* Uma ferramenta interativa na área de Segurança permite realizar a encriptação/decriptação com **Cifra de César**, **Cifra de Vigenère** e o hashing com **Bcrypt**, demonstrando de forma prática a vulnerabilidade dos algoritmos antigos e o porquê de usarmos Bcrypt nas senhas.
+

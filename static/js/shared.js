@@ -94,6 +94,20 @@ inicializar();
 
 
 document.addEventListener("DOMContentLoaded", () => {
+    const userCard = document.querySelector(".user-card");
+    if (userCard) {
+        userCard.addEventListener("click", (e) => {
+            // Se o clique foi no botão de logout, não navega
+            if (e.target.id === "btn-logout" || e.target.classList.contains("user-logout")) {
+                return;
+            }
+            window.location.href = "/perfil";
+        });
+    }
+
     const btnLogoutList = document.querySelectorAll("#btn-logout");
-    btnLogoutList.forEach(btn => btn.addEventListener("click", () => { if(typeof fazerLogout === 'function') fazerLogout(); }));
+    btnLogoutList.forEach(btn => btn.addEventListener("click", (e) => {
+        e.stopPropagation(); // Impede propagação para o user-card
+        if(typeof fazerLogout === 'function') fazerLogout();
+    }));
 });
